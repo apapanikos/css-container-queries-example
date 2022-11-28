@@ -1,0 +1,83 @@
+.page {
+  max-width: 1000px;
+  margin: 0 auto;
+  container-type: inline-size;
+}
+
+header .hero-title {
+  max-width: 550px;
+  padding: 4rem 0;
+  font-weight: bold;
+  letter-spacing: -0.125rem;
+  font-size: 3rem;
+}
+
+header .hero-title a {
+  text-decoration: none;
+  box-shadow: inset 0 -2px 0 rgb(99, 50, 127), 0 2px 0 rgb(127, 50, 67);
+  transition: box-shadow 0.3s;
+  color: inherit;
+  overflow: hidden;
+}
+
+header .hero-title a:hover {
+  box-shadow: inset 0 -30px 0 rgba(127, 59, 50, 0.5),
+    0 2px 0 rgba(127, 50, 118, 0.5);
+}
+
+.container {
+  container-type: inline-size;
+}
+
+.layout {
+}
+
+.info {
+}
+
+.info h4 {
+  font-weight: normal;
+  font-style: italic;
+}
+
+.card {
+  margin-bottom: 0.5rem;
+}
+
+.image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 250px;
+}
+
+@container (min-width: 36rem) {
+  .info {
+    padding: 0 1rem;
+  }
+  .image {
+    border-radius: 0.5rem;
+  }
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+}
+
+@container (max-width: 36rem) {
+  .image {
+    background-position: center 10%;
+    border-radius: 0.25rem;
+  }
+  .info p {
+    display: none;
+  }
+}
+
+@container (min-width: 900px) {
+  .layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 1rem;
+  }
+}
